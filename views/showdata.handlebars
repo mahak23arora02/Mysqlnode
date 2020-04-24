@@ -1,0 +1,27 @@
+
+<div class="container">
+  <h2>Contextual Classes</h2>
+  <p>Contextual classes can be used to color table rows or table cells. The classes that can be used are: .active, .success, .info, .warning, and .danger.</p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+        <th>Update</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+        {{#each result1}}
+          <tr>
+           <td>{{this.title}}</td> 
+           <td>{{this.body}}</td>
+           <td>{{this.email}}</td>
+           <td><a href="/update/{{this.email}}" class="btn btn-info">Update</a></td>
+           <td><a href="/delete/{{this.email}}" class="btn btn-warning"> Delete</a></td>
+          </tr>
+        {{/each}}
+    </tbody>
+  </table>
+</div>
